@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.yujhon.frame</groupId>
+		<artifactId>JYL-parent</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>JYL-ZeJhon</artifactId>
+	<name>JYL-ZeJhon</name>
+	<packaging>war</packaging>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.yujhon.frame</groupId>
+			<artifactId>JYL-Util</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>ZenJhon</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.0.2</version>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<dataSource.project.driverClass>com.mysql.jdbc.Driver</dataSource.project.driverClass>
+				<dataSource.project.jdbcURL>jdbc:mysql://localhost:3306/zejhon?zeroDateTimeBehavior=convertToNull&amp;amp;characterEncoding=utf8&amp;amp;autoReconnect=true&amp;amp;failOverReadOnly=false&amp;amp;useCursorFetch=true&amp;amp;defaultFetchSize=1000</dataSource.project.jdbcURL>
+				<dataSource.project.user>root</dataSource.project.user>
+				<dataSource.project.password>root</dataSource.project.password>
+				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
+				<validationQuery.sqlserver>SELECT 1</validationQuery.sqlserver>
+				<hibernate.hbm2ddl.auto>validate</hibernate.hbm2ddl.auto>
+			</properties>
+		</profile>
+	</profiles>
+</project>
