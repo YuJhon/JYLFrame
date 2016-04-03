@@ -26,6 +26,11 @@
 		<commons-logging-api.version>1.1</commons-logging-api.version>
 		<commons-validator.version>1.3.1</commons-validator.version>
 		<commons-email.version>1.2</commons-email.version>
+		<cxf.version>2.2.5</cxf.version>
+		<poi.version>3.9</poi.version>
+		<poi-ooxml-schemas.version>3.9</poi-ooxml-schemas.version>
+		<poi-ooxml.version>3.9</poi-ooxml.version>
+		<poi-scratchpad.version>3.9</poi-scratchpad.version>
 	</properties>
 	<dependencies>
 		<!-- commons-beanutils -->
@@ -110,6 +115,63 @@
 			<groupId>commons-validator</groupId>
 			<artifactId>commons-validator</artifactId>
 			<version>${commons-validator.version}</version>
+		</dependency>
+		<!-- json -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+		<!-- httpClient -->
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!-- webService -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.23</version>
+		</dependency>
+		
+		<!-- poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi-ooxml.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${poi-ooxml-schemas.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${poi-scratchpad.version}</version>
 		</dependency>
 	</dependencies>
 </project>
